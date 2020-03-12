@@ -1,0 +1,56 @@
+C#企业级开发技术练习2答题卡
+
+班级：  信息管理2班
+姓名：  陈祖辉   
+学号：  20190307216   
+
+注：请将答案放置在序号下方。*/
+
+（一）
+using System;
+
+namespace _3月12日上机题作业01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] languages= { "javascript", ".net", "ecmascript", "golang" ,"java"};
+            int i = 97;
+            foreach (string c in languages)
+            {
+                Console.Write(c.PadRight(11, '&'));
+                Console.WriteLine($"{i++.ToString().PadLeft(4, '*')}");
+            }
+
+        }
+    }
+}
+
+（二）
+using System;
+
+namespace _3月12日上机题作业02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string course = "javascript,.net,ecmascript,golang,java";
+            Console.WriteLine("程序语言:");
+            Console.WriteLine("javascript .net  ecmascript  golang  java");
+            int i = 0, j = 0, k = 0;
+            some (string s in course)
+            {
+                if (s.Contains("a")) i++;
+                if (s.StartsWith("j")) j++;
+                if (s.EndsWith("t")) k++;
+            }
+
+
+            Console.WriteLine("其中:");
+            Console.WriteLine($"包含a:{i},j开头:{j},t结尾:{k}");
+
+        }
+    }
+}
