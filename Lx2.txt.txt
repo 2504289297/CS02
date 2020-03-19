@@ -16,11 +16,12 @@ namespace _3月12日上机题作业01
         static void Main(string[] args)
         {
             string[] languages= { "javascript", ".net", "ecmascript", "golang" ,"java"};
-            int i = 97;
+            int i = 95;
             foreach (string c in languages)
             {
+                i = i + 2;
                 Console.Write(c.PadRight(11, '&'));
-                Console.WriteLine($"{i++.ToString().PadLeft(4, '*')}");
+                Console.WriteLine($"{i.ToString().PadLeft(5, '*')}");
             }
 
         }
@@ -36,21 +37,22 @@ namespace _3月12日上机题作业02
     {
         static void Main(string[] args)
         {
-            string course = "javascript,.net,ecmascript,golang,java";
-            Console.WriteLine("程序语言:");
-            Console.WriteLine("javascript .net  ecmascript  golang  java");
+            string course = "程序语言： ,javascript, .net, ecmascript, golang ,java";
+            string[] r = course.Split(',');
+            foreach (string s in r)
+                Console.WriteLine(s);
             int i = 0, j = 0, k = 0;
-            some (string s in course)
+            foreach(string s in r)
             {
                 if (s.Contains("a")) i++;
                 if (s.StartsWith("j")) j++;
                 if (s.EndsWith("t")) k++;
             }
-
-
-            Console.WriteLine("其中:");
-            Console.WriteLine($"包含a:{i},j开头:{j},t结尾:{k}");
+            Console.WriteLine("其中：");
+            Console.WriteLine($"包含a:{i}门,j开头:{j}门,t结尾:{k}门");
 
         }
     }
+}
+
 }
